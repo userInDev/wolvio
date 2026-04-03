@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { BG_BLOB, BG_BLOB_DELAYED, RISE, SHINE, STAGGER } from "../../../constants/animations";
 import ServiceEcoSystem from "./serviceEcoSystem";
+
+
 export default function HeroSection() {
   return (
-    <section
-      className="relative flex items-center overflow-hidden"
-      style={{ background: "var(--color-background)", minHeight: "90vh" }}
-    >
+<section
+  className="relative flex items-center overflow-hidden pt-10 lg:pt-0"
+  style={{ background: "var(--color-background)", minHeight: "90vh" }}
+>
       {/* Background — unchanged */}
       <div className="absolute inset-0 pointer-events-none select-none">
         <div
@@ -45,28 +47,7 @@ export default function HeroSection() {
             animate="visible"
             className="flex flex-col justify-center lg:pr-6"
           >
-            {/* Badge */}
-            <motion.div variants={RISE} className="flex items-center gap-2.5 mb-5">
-              <motion.span
-                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase"
-                style={{
-                  background: "rgba(47,111,115,0.08)",
-                  color: "var(--color-accent)",
-                  border: "1px solid rgba(47,111,115,0.15)",
-                }}
-                animate={{
-                  boxShadow: [
-                    "0 0 0 0 rgba(47,111,115,0)",
-                    "0 0 0 6px rgba(47,111,115,0.06)",
-                    "0 0 0 0 rgba(47,111,115,0)",
-                  ],
-                }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <Sparkles size={12} />
-                Specialist Veeva Consulting
-              </motion.span>
-            </motion.div>
+
 
             {/* H1 — updated */}
             <motion.h1
