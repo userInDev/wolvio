@@ -42,18 +42,6 @@ function AnimatedNumber({
   );
 }
 
-const marqueeItems = [
-  "Veeva Vault",
-  "QualityDocs",
-  "RegulatoryDocs",
-  "CTMS",
-  "ClinOps",
-  "PromoMats",
-  "MedComms",
-  "GxP Compliance",
-  "Life Sciences",
-  "Managed Services",
-];
 
 export default function StatsSection() {
   const { ref, isInView } = useScrollReveal(0.2);

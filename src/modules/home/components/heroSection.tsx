@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { BG_BLOB, BG_BLOB_DELAYED, RISE, SHINE, STAGGER } from "../../../constants/animations";
 import ServiceEcoSystem from "./serviceEcoSystem";
-import { BG_BLOB, BG_BLOB_DELAYED, RISE, SHINE, STAGGER, STATS_REVEAL } from "../../../constants/animations";
 export default function HeroSection() {
   return (
     <section
