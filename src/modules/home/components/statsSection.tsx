@@ -104,26 +104,6 @@ export default function StatsSection() {
         </div>
       </div>
 
-      {/* Marquee strip */}
-      <div className="bg-[var(--color-accent)] py-4 overflow-hidden">
-        <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
-          className="flex items-center gap-0 whitespace-nowrap"
-        >
-          {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map(
-            (item, i) => (
-              <span
-                key={i}
-                className="inline-flex items-center gap-6 px-8 text-sm font-semibold text-white/80 uppercase tracking-widest"
-              >
-                {item}
-                <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
-              </span>
-            )
-          )}
-        </motion.div>
-      </div>
     </section>
   );
 }

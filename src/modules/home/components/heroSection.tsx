@@ -92,10 +92,12 @@ export default function HeroSection() {
                 />
               </span>{" "}
               Consulting Services for <br className="hidden sm:block" />
-              Pharma, Biotech &{" "}
-              <span style={{ color: "var(--color-accent)" }}>Med Tech</span>
+              Pharma, Biotech{" "}&
+              <span style={{ whiteSpace: "nowrap" }}>
+                {" "}
+                <span style={{ color: "var(--color-accent)" }}>Med Tech</span>
+              </span>
             </motion.h1>
-
             {/* Subtitle — updated */}
             <motion.p
               variants={RISE}
@@ -106,9 +108,9 @@ export default function HeroSection() {
                 maxWidth: 420,
               }}
             >
-              Wolvio provides specialist Veeva Vault consulting for pharma, biotech, and
-              med tech; from implementation to post go-live support. Our senior consultants
-              brings deep{" "}
+              Wolvio provides specialist Veeva Vault consulting for pharma, biotech, and{" "}
+              <span style={{ whiteSpace: "nowrap" }}>med tech;</span> from implementation
+              to post go-live support. Our senior consultants brings deep{" "}
               <strong style={{ color: "var(--color-primary)" }}>GxP expertise</strong> and
               hands-on platform experience, delivering the{" "}
               <strong style={{ color: "var(--color-primary)" }}>regulatory precision</strong>{" "}
@@ -151,28 +153,7 @@ export default function HeroSection() {
                 </span>
               </motion.button>
             </motion.div>
-
-            {/* Stats — unchanged */}
-            <motion.div variants={RISE} className="flex items-center gap-6">
-              {[
-                { val: "15+", label: "Life Sciences Clients" },
-                { val: "12+", label: "Veeva Engagements" },
-                { val: "50+", label: "Years Combined Expertise" },
-              ].map(({ val, label }, i) => (
-                <div key={label}>
-                  <motion.div
-                    className="font-bold text-xl"
-                    style={{ color: "var(--color-primary)" }}
-                    {...STATS_REVEAL(i)}
-                  >
-                    {val}
-                  </motion.div>
-                  <div className="text-xs">{label}</div>
-                </div>
-              ))}
-            </motion.div>
           </motion.div>
-
           {/* Right — unchanged */}
           <motion.div
             initial={{ opacity: 0 }}

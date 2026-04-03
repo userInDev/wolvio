@@ -1,6 +1,3 @@
-
-
-
 // ===== Entrance =====
 export const STAGGER = {
   hidden: {},
@@ -97,7 +94,6 @@ export const STATS_REVEAL = (i: number) => ({
   },
 });
 
-
 // ===== Scroll reveal base =====
 export const SCROLL_REVEAL = {
   initial: { opacity: 0, y: 32 },
@@ -135,3 +131,27 @@ export const BUTTON_INTERACTION = {
   whileHover: { scale: 1.05 },
   whileTap: { scale: 0.96 },
 };
+
+export const CARD_HOVER = {
+  whileHover: {
+    y: -10,
+    scale: 1.018,
+    boxShadow:
+      "0 24px 48px rgba(47,111,115,0.14), 0 0 0 1.5px rgba(47,111,115,0.2)",
+  },
+  whileTap: { scale: 0.975, y: -4 },
+  transition: { type: "spring", stiffness: 360, damping: 28 },
+};
+
+// Factory for staggered blur-in entry (pass index + isInView)
+export const cardReveal = (i: number, inView: any) => ({
+  initial: { opacity: 0, y: 36, filter: "blur(6px)" },
+  animate: inView
+    ? { opacity: 1, y: 0, filter: "blur(0px)" }
+    : { opacity: 0, y: 36, filter: "blur(6px)" },
+  transition: {
+    duration: 0.55,
+    delay: 0.1 + i * 0.1,
+    ease: [0.22, 1, 0.36, 1],
+  },
+});

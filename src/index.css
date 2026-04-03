@@ -19,6 +19,8 @@
   /* ── Typography ── */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
+  /** As per BRD docks font size */
+  /* 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -29,7 +31,19 @@
   --font-size-4xl: 2.25rem;
   --font-size-5xl: 3rem;
   --font-size-6xl: 3.75rem;
-  --font-size-7xl: 4.5rem;
+  --font-size-7xl: 4.5rem; */
+
+  --font-size-xs: 0.625rem; /* was 0.75rem  → 10px */
+  --font-size-sm: 0.75rem; /* was 0.875rem → 12px */
+  --font-size-base: 0.875rem; /* was 1rem     → 14px */
+  --font-size-lg: 1rem; /* was 1.125rem → 16px */
+  --font-size-xl: 1.125rem; /* was 1.25rem  → 18px */
+  --font-size-2xl: 1.25rem; /* was 1.5rem   → 20px */
+  --font-size-3xl: 1.5rem; /* was 1.875rem → 24px */
+  --font-size-4xl: 1.875rem; /* was 2.25rem  → 30px */
+  --font-size-5xl: 2.25rem; /* was 3rem     → 36px */
+  --font-size-6xl: 3rem; /* was 3.75rem  → 48px */
+  --font-size-7xl: 3.75rem; /* was 4.5rem   → 60px */
 
   /* ── Spacing ── */
   --spacing-section: 6rem;

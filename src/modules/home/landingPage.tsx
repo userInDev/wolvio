@@ -16,8 +16,9 @@ export default function LandingPage() {
         keywords="Veeva consulting, life sciences, pharma, biotech, med tech, managed services, GxP compliance"
       />
       <HeroSection />
-      <ServicesSection />
       <StatsSection />
+      <ServicesSection />
+
       <CaseStudySection />
       <WhyWolvioSection />
       <InsightsSection />

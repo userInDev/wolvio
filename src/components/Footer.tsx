@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import { BRAND, FOOTER_NAV_LINKS, POLICY_LINKS, SOCIAL_LINKS } from "../constants/constants";
 
 const socialIconMap: Record<string, React.ElementType> = {
@@ -10,51 +10,6 @@ const socialIconMap: Record<string, React.ElementType> = {
 export default function Footer() {
   return (
     <footer className="bg-primary text-white">
-
-      {/* Top CTA bar */}
-      <div className="border-b border-white/10">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-16">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-            <div>
-              <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3">
-                Get in touch
-              </p>
-              <h2 className="text-3xl lg:text-5xl font-bold leading-tight mb-3">
-                Let's create value together.
-              </h2>
-              <p className="text-white/50 text-base max-w-md">
-                {BRAND.TAGLINE} — Partner with us to unlock the full potential
-                of your business through technology and human ingenuity.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-              <motion.a
-                href={`mailto:${BRAND.EMAIL}`}
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.96 }}
-                className="group flex items-center gap-2.5 bg-accent hover:bg-accent-light text-white px-7 py-4 rounded-full font-semibold text-sm transition-colors duration-200"
-              >
-                Email us
-                <ArrowUpRight
-                  size={15}
-                  className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </motion.a>
-              <motion.a
-                href={BRAND.WEBSITE}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.96 }}
-                className="flex items-center gap-2.5 text-white border border-white/20 hover:border-white/40 hover:bg-white/5 px-7 py-4 rounded-full font-semibold text-sm transition-all duration-200"
-              >
-                Visit website
-              </motion.a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main footer content */}
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">

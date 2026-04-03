@@ -4,7 +4,6 @@ import {
   ChevronDown,
   Cloud, Cpu,
   ExternalLink,
-  Link2,
   Menu, X,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -13,14 +12,12 @@ import { NavItem, ServiceItem } from "../types";
 
 const SERVICE_ICONS: Record<string, React.ElementType> = {
   "Digital Cloud — Veeva": Cloud,
-  "Digital Transformation": Cpu,
-  Blockchain: Link2,
+  "Digital Transformation and Ai": Cpu,
 };
 
 const TAG_COLORS: Record<string, string> = {
   "Life Sciences": "bg-teal-50 text-teal-700",
   Strategy: "bg-blue-50 text-blue-700",
-  Web3: "bg-violet-50 text-violet-700",
 };
 
 function ServicesMegaMenu({ services }: { services: ServiceItem[] }) {
@@ -30,10 +27,10 @@ function ServicesMegaMenu({ services }: { services: ServiceItem[] }) {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 12, scale: 0.98 }}
       transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[560px] bg-white rounded-2xl shadow-card-hover border border-border overflow-hidden"
+      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-140 bg-white rounded-2xl shadow-card-hover border border-border overflow-hidden"
     >
       {/* Top gradient bar */}
-      <div className="h-[3px] w-full bg-gradient-to-r from-primary via-accent to-accent-light" />
+      <div className="h-0.75 w-full bg-linear-to-r from-primary via-accent to-accent-light" />
 
       <div className="p-3">
         <div className="px-3 pt-2 pb-3 mb-1">
@@ -138,13 +135,13 @@ export default function Header() {
             animate={{ scaleX: 1 }}
             exit={{ scaleX: 0, opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-accent to-accent-light origin-left"
+            className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-primary via-accent to-accent-light origin-left"
           />
         )}
       </AnimatePresence>
 
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-16 lg:h-[72px]">
+      <div className="max-w-360 mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-between h-16 lg:h-20">
 
           {/* Logo */}
           <motion.a

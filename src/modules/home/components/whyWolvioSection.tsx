@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Users, Cpu, Sparkles } from "lucide-react";
 import { useScrollReveal } from "../../../hooks/useScrollReveal";
+import { CARD_HOVER, cardReveal } from "../../../constants/animations";
 
 
 const pillars = [
@@ -50,7 +51,10 @@ export default function WhyWolvioSection() {
           <p className="text-sm font-semibold uppercase tracking-widest text-accent mb-3">
             Why Wolvio
           </p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-primary leading-tight max-w-2xl mx-auto">
+          <h2
+            className="font-bold text-primary leading-tight max-w-2xl mx-auto"
+            style={{ fontSize: "clamp(1.5rem, 2.2vw, 2.25rem)" }}
+          >
             Specialist Depth. Senior Delivery.{" "}
             <span className="text-accent">Agile without Risk</span>
           </h2>
@@ -61,11 +65,9 @@ export default function WhyWolvioSection() {
           {pillars.map(({ icon: Icon, title, description, accent }, i) => (
             <motion.div
               key={title}
-              initial={{ opacity: 0, y: 32 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
-              whileHover={{ y: -6 }}
-              className="group relative bg-white rounded-2xl border border-border overflow-hidden cursor-default shadow-(--shadow-card) hover:shadow-(--shadow-card-hover) transition-shadow duration-300"
+              {...cardReveal(i, isInView)}
+              {...CARD_HOVER}
+              className="group relative bg-white rounded-2xl border border-border overflow-hidden cursor-default"
             >
               <motion.div
                 className={`h-1 w-full bg-linear-to-r ${accent}`}

@@ -36,18 +36,11 @@ export const NAV_LINKS: NavItem[] = [
         tag: "Life Sciences",
       },
       {
-        label: "Digital Transformation",
+        label: "Digital Transformation and AI",
         href: "https://www.wolviosolutions.com/digital-transformation",
         description:
           "Technology-led transformation strategy for modern enterprises.",
         tag: "Strategy",
-      },
-      {
-        label: "Blockchain",
-        href: "https://www.wolviosolutions.com/blockchain",
-        description:
-          "Decentralized solutions built for trust and transparency.",
-        tag: "Web3",
       },
     ],
   },

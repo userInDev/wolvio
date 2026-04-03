@@ -46,7 +46,7 @@ export default function CTASection() {
             {/* Headline — updated */}
             <motion.h2
               {...(isInView ? FADE_UP(0.25) : {})}
-              className="text-4xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-3xl mx-auto"
+              className="text-3xl lg:text-4xl font-bold text-white leading-tight mb-6 max-w-3xl mx-auto"
             >
               A Focused Conversation Is Where Every Veeva Engagement Starts.
             </motion.h2>
