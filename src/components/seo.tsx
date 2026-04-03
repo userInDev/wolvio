@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import { BRAND } from "../constants/constants";
 
 type SEOProps = {
     title: string;
@@ -18,8 +17,7 @@ export default function SEO({
     image = "/default-og.png",
     type = "website",
 }: SEOProps) {
-    const siteName = BRAND.NAME
-    const fullTitle = `${title} | ${siteName}`;
+    const fullTitle = `${title}`;
 
     return (
         <Helmet>

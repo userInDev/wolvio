@@ -13,7 +13,6 @@ export default function LandingPage() {
       <SEO
         title="Wolvio | Veeva Consulting & Managed Services for Life Sciences"
         description="Wolvio offers specialist Veeva Consulting Services for life sciences implementation & managed services with deep GxP knowledge & regulatory precision."
-        keywords="Veeva consulting, life sciences, pharma, biotech, med tech, managed services, GxP compliance"
       />
       <HeroSection />
       <StatsSection />
