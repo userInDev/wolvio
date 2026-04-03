@@ -1,12 +1,13 @@
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import { useEffect } from "react";
-import { useScrollReveal } from "../hooks/useScrollReveal";
+import { useScrollReveal } from "../../../hooks/useScrollReveal";
 
 const stats = [
-  { value: 94, suffix: "%", label: "Client retention rate", prefix: "" },
-  { value: 2400, suffix: "+", label: "Experts worldwide", prefix: "" },
-  { value: 18, suffix: "B+", label: "Value delivered annually", prefix: "$" },
-  { value: 40, suffix: "+", label: "Countries of operation", prefix: "" },
+  { value: 15, suffix: "+", label: "Life Sciences Clients", prefix: "" },
+  { value: 12, suffix: "+", label: "Veeva Engagements Delivered", prefix: "" },
+  { value: 8, suffix: "+", label: "Veeva Vault Certifications", prefix: "" },
+  { value: 5, suffix: "+", label: "Fortune 500 Partnerships", prefix: "" },
+  { value: 50, suffix: "+", label: "Years of Combined Expertise", prefix: "" },
 ];
 
 function AnimatedNumber({
@@ -42,14 +43,16 @@ function AnimatedNumber({
 }
 
 const marqueeItems = [
-  "Strategy & Consulting",
-  "Cloud & Infrastructure",
-  "AI & Data",
-  "Digital Engineering",
-  "Security",
-  "Sustainability",
-  "Industry X",
-  "Applied Intelligence",
+  "Veeva Vault",
+  "QualityDocs",
+  "RegulatoryDocs",
+  "CTMS",
+  "ClinOps",
+  "PromoMats",
+  "MedComms",
+  "GxP Compliance",
+  "Life Sciences",
+  "Managed Services",
 ];
 
 export default function StatsSection() {
@@ -58,23 +61,26 @@ export default function StatsSection() {
   return (
     <section className="relative overflow-hidden">
       {/* Stats bar */}
-      <div className="bg-[var(--color-primary)] py-20" ref={ref}>
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+      <div className="bg-primary py-20" ref={ref}>
+        <div className="max-w-360 mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7 }}
             className="text-center mb-14"
           >
-            <p className="text-sm font-semibold uppercase tracking-widest text-[var(--color-accent-light)] mb-3">
-              Proven at scale
+            <p className="text-sm font-semibold uppercase tracking-widest text-accent-light mb-3">
+              Delivery Track Record
             </p>
             <h2 className="text-3xl lg:text-4xl font-bold text-white">
-              Numbers that speak for themselves
+              Impact driven outcomes
             </h2>
+            <p className="mt-4 text-white/50 text-sm max-w-xl mx-auto leading-relaxed">
+              Wolvio delivers measurable success across implementations, regulatory programs, and managed services — driven by a consistent commitment to outcomes and delivery excellence.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
             {stats.map(({ value, suffix, label, prefix }, i) => (
               <motion.div
                 key={label}

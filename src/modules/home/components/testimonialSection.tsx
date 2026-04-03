@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
-import { useScrollReveal } from "../hooks/useScrollReveal";
+import { useScrollReveal } from "../../../hooks/useScrollReveal";
 
 const testimonial = {
   quote:
-    "Partnering with BrandSite has been transformative. Their ability to blend deep industry expertise with cutting-edge technology helped us reimagine our entire customer experience — delivering results we didn't think were possible within the timeline.",
-  author: "Sarah Chen",
-  title: "Chief Digital Officer",
-  company: "Meridian Financial Group",
-  metric: "40% faster time-to-market",
+    "Wolvio's structured approach to Veeva Vault gave us full visibility into deleted records, eliminated the risk of accidental data loss, and completely transformed how we manage audit readiness across our regulated workflows.",
+  author: "Senior Compliance Lead",
+  title: "Global Regulatory Affairs",
+  company: "Life Sciences Client",
+  metric: "Improved audit readiness",
 };
 
 const clients = [
-  "Meridian",
-  "NovaCorp",
-  "Vertex",
-  "Solaris",
-  "Pinnacle",
-  "Cascade",
-  "Horizon",
-  "Apex",
+  "Pharma",
+  "Biotech",
+  "Med Tech",
+  "CRO",
+  "CDMO",
+  "Regulatory",
+  "Clinical",
+  "Quality",
 ];
 
 export default function TestimonialSection() {
@@ -35,7 +35,7 @@ export default function TestimonialSection() {
           className="text-center mb-12"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-subtle)] mb-8">
-            Trusted by industry leaders
+            Trusted across regulated industries
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
             {clients.map((name, i) => (
@@ -56,7 +56,7 @@ export default function TestimonialSection() {
         {/* Divider */}
         <div className="h-px bg-[var(--color-border)] mb-24" />
 
-        {/* Testimonial */}
+        {/* Case study / Testimonial */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -32 }}
@@ -71,7 +71,7 @@ export default function TestimonialSection() {
             </blockquote>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] flex items-center justify-center text-white font-bold text-lg">
-                {testimonial.author[0]}
+                W
               </div>
               <div>
                 <div className="font-semibold text-[var(--color-primary)]">
@@ -93,20 +93,21 @@ export default function TestimonialSection() {
             <div className="bg-[var(--color-primary)] rounded-2xl p-10 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-[var(--color-accent)]/20 -translate-y-1/3 translate-x-1/3" />
               <div className="relative z-10">
-                <div className="text-5xl font-bold text-[var(--color-accent-light)] mb-2">
-                  40%
+                <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-accent-light)] mb-4">
+                  Case Study Highlight
+                </p>
+                <div className="text-2xl font-bold text-white mb-2 leading-snug">
+                  Veeva Vault Data Control & Compliance
                 </div>
-                <div className="text-xl font-semibold mb-4">Faster time-to-market</div>
                 <p className="text-white/60 text-sm leading-relaxed mb-8">
-                  Achieved through our proprietary delivery framework and
-                  AI-augmented engineering practices.
+                  Managing deletions in Veeva Vault created complexity around data retention, audit trails, and regulatory compliance — especially when records needed to remain traceable without being actively accessible across regulated workflows.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { v: "12 wks", l: "Avg. delivery" },
-                    { v: "99.9%", l: "Uptime SLA" },
-                    { v: "3.2x", l: "ROI delivered" },
-                    { v: "Zero", l: "Critical incidents" },
+                    { v: "Full", l: "Audit trail visibility" },
+                    { v: "Zero", l: "Accidental data loss" },
+                    { v: "Strong", l: "Governance & traceability" },
+                    { v: "Ready", l: "Regulatory compliance" },
                   ].map(({ v, l }) => (
                     <div
                       key={l}
