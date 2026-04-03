@@ -51,15 +51,6 @@ export default function CTASection() {
               A Focused Conversation Is Where Every Veeva Engagement Starts.
             </motion.h2>
 
-            {/* Subtitle */}
-            <motion.p
-              {...(isInView ? FADE_UP(0.35, 16) : {})}
-              className="text-lg text-white/60 mb-10 max-w-xl mx-auto"
-            >
-              Let's explore how we can help your organization lead with confidence
-              in an era of continuous transformation.
-            </motion.p>
-
             {/* CTAs — updated */}
             <motion.div
               {...(isInView ? FADE_UP(0.45, 16) : {})}
