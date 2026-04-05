@@ -5,7 +5,7 @@ export default function AboutHeroSection() {
   return (
     <section
       className="relative flex items-center justify-center overflow-hidden"
-      style={{ background: "var(--color-background)", minHeight: "52vh" }}
+      style={{ background: "var(--color-background)", minHeight: "70vh" }}
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none select-none">
