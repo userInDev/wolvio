@@ -1,15 +1,17 @@
+import React from "react";
 import SEO from "../../components/seo";
 import CaseStudySection from "./components/caseStudySection";
-import CTASection from "./components/ctaSection";
 import HeroSection from "./components/heroSection";
 import InsightsSection from "./components/insightsSection";
 import ServicesSection from "./components/servicesSection";
 import StatsSection from "./components/statsSection";
 import WhyWolvioSection from "./components/whyWolvioSection";
+import CTASection from "../../components/ctaSection";
+import { CTA_CONTENT } from "../../constants/constants";
 
-export default function LandingPage() {
+const LandingPage = () => {
   return (
-    <>
+    <React.Fragment>
       <SEO
         title="Wolvio | Veeva Consulting & Managed Services for Life Sciences"
         description="Wolvio offers specialist Veeva Consulting Services for life sciences implementation & managed services with deep GxP knowledge & regulatory precision."
@@ -17,11 +19,12 @@ export default function LandingPage() {
       <HeroSection />
       <StatsSection />
       <ServicesSection />
-
       <CaseStudySection />
       <WhyWolvioSection />
       <InsightsSection />
-      <CTASection />
-    </>
+      <CTASection {...CTA_CONTENT.home} />
+    </React.Fragment>
   );
 }
+
+export default React.memo(LandingPage);

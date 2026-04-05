@@ -2,11 +2,14 @@ import {
   BarChart3,
   Brain,
   Cloud,
+  Cpu,
   FlaskConical,
   Globe2,
+  Lightbulb,
   Link2,
+  Target,
 } from "lucide-react";
-import { NavItem } from "../types";
+import { CTASectionProps, NavItem } from "../types";
 
 export const BRAND = {
   NAME: "Wolvio solutions",
@@ -57,7 +60,7 @@ export const NAV_LINKS: NavItem[] = [
   {
     kind: "link",
     label: "About Us",
-    href: "https://www.wolviosolutions.com/about",
+    href: "/about-us",
   },
 ];
 
@@ -73,7 +76,7 @@ export const FOOTER_NAV_LINKS = [
   { label: "Blockchain", href: "https://www.wolviosolutions.com/blockchain" },
   { label: "Blogs", href: "https://www.wolviosolutions.com/blog" },
   { label: "Careers", href: "https://www.wolviosolutions.com/careers" },
-  { label: "About Us", href: "https://www.wolviosolutions.com/about" },
+  { label: "About Us", href: "/about-us" },
 ] as const;
 
 export const SOCIAL_LINKS = [
@@ -144,3 +147,97 @@ export const ECO_SYSTEM_SERVICE_MOCK_DATA = [
     delay: 1.35,
   },
 ];
+
+export const SERVICE_ICONS: Record<string, React.ElementType> = {
+  "Digital Cloud — Veeva": Cloud,
+  "Digital Transformation and Ai": Cpu,
+};
+
+export const TAG_COLORS: Record<string, string> = {
+  "Life Sciences": "bg-teal-50 text-teal-700",
+  Strategy: "bg-blue-50 text-blue-700",
+};
+
+export const ABOUT_PILLARS = [
+  {
+    icon: Target,
+    label: "Our Mission",
+    title: "Drive business success through cutting-edge digital solutions",
+    description:
+      "To drive business success by delivering cutting-edge digital solutions that inspire growth, efficiency, and lasting innovation, empowering life sciences organisations to achieve more with the right technology at their side.",
+    color: "from-[#0A2540] to-[#0d3060]",
+  },
+  {
+    icon: Lightbulb,
+    label: "Our Vision",
+    title: "Lead globally in transformative IT services",
+    description:
+      "To lead globally in transformative IT services, enabling organisations to unlock unparalleled success in an ever-evolving digital landscape, and to become the benchmark for specialist Veeva consulting in life sciences.",
+    color: "from-[#2F6F73] to-[#3a8a8f]",
+  },
+];
+
+export const ABOUT_LEADERS = [
+  {
+    name: "Name",
+    designation: "Designation",
+    bio: "2–3 sentence bio covering background, Veeva and life sciences expertise, and what this person leads at Wolvio.",
+    linkedIn: "#",
+    initials: "N",
+  },
+];
+
+export const ABOUT_APPROACHES = [
+  {
+    number: "01",
+    title: "Depth over breadth",
+    description:
+      "Every consultant brings genuine Veeva and life sciences expertise, not broad platform knowledge stretched across industries. We hire for depth and keep it that way.",
+    color: "from-[#0A2540] to-[#0d3060]",
+  },
+  {
+    number: "02",
+    title: "Compliance first",
+    description:
+      "Every configuration decision and workflow is reviewed with GxP, 21 CFR Part 11, and IDMP compliance at the forefront — not as an afterthought once build is complete.",
+    color: "from-[#2F6F73] to-[#3a8a8f]",
+  },
+  {
+    number: "03",
+    title: "Senior accountability",
+    description:
+      "Senior consultants lead every engagement from discovery through hypercare. You will not be handed to junior resources once the contract is signed.",
+    color: "from-[#0A2540] to-[#2F6F73]",
+  },
+  {
+    number: "04",
+    title: "Knowledge transfer",
+    description:
+      "We build your team's capability throughout every engagement. Our measure of success is client self-sufficiency, not perpetual dependency on our support.",
+    color: "from-[#2F6F73] to-[#0A2540]",
+  },
+];
+
+export const ABOUT_HIGHLIGHTS = [
+  { value: "2022", label: "Founded" },
+  { value: "3", label: "Continents Served" },
+  { value: "2", label: "India Offices" },
+  { value: "50+", label: "Years Combined Experience" },
+];
+
+export const CTA_CONTENT: Record<string, CTASectionProps> = {
+  home: {
+    badge: "Start a Conversation",
+    headline: "A Focused Conversation Is Where Every Veeva Engagement Starts.",
+    primaryCTA: { label: "Schedule a Consultation", href: "/contact" },
+    secondaryCTA: { label: "Contact Us", href: "/contact" },
+    footnote: "No commitment required. We typically respond within 1 day.",
+  },
+
+  about: {
+    badge: "Get Started",
+    headline:
+      "Schedule a time to discuss your requirements and learn how our expertise can drive meaningful outcomes for your business.",
+    primaryCTA: { label: "Get in touch", href: "/contact" },
+  },
+};

@@ -25,8 +25,8 @@ export default function TestimonialSection() {
   const { ref, isInView } = useScrollReveal(0.15);
 
   return (
-    <section className="py-28 bg-[var(--color-background)] overflow-hidden" ref={ref}>
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+    <section className="py-28 bg-background overflow-hidden" ref={ref}>
+      <div className="max-w-360 mx-auto px-6 lg:px-12">
         {/* Client logos */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function TestimonialSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-subtle)] mb-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-text-subtle mb-8">
             Trusted across regulated industries
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
@@ -45,7 +45,7 @@ export default function TestimonialSection() {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.05 * i, duration: 0.4 }}
                 whileHover={{ scale: 1.08, opacity: 1 }}
-                className="text-xl font-bold text-[var(--color-primary)]/20 hover:text-[var(--color-primary)]/50 transition-colors duration-200 cursor-default tracking-tight"
+                className="text-xl font-bold text-primary/20 hover:text-primary/50 transition-colors duration-200 cursor-default tracking-tight"
               >
                 {name}
               </motion.div>
@@ -54,7 +54,7 @@ export default function TestimonialSection() {
         </motion.div>
 
         {/* Divider */}
-        <div className="h-px bg-[var(--color-border)] mb-24" />
+        <div className="h-px bg-border mb-24" />
 
         {/* Case study / Testimonial */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -63,21 +63,21 @@ export default function TestimonialSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <div className="text-6xl font-serif text-[var(--color-accent)]/30 leading-none mb-6">
+            <div className="text-6xl font-serif text-accent/30 leading-none mb-6">
               "
             </div>
-            <blockquote className="text-xl lg:text-2xl font-medium text-[var(--color-primary)] leading-relaxed mb-8">
+            <blockquote className="text-xl lg:text-2xl font-medium text-primary leading-relaxed mb-8">
               {testimonial.quote}
             </blockquote>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] flex items-center justify-center text-white font-bold text-lg">
+              <div className="w-12 h-12 rounded-full bg-linear-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg">
                 W
               </div>
               <div>
-                <div className="font-semibold text-[var(--color-primary)]">
+                <div className="font-semibold text-primary">
                   {testimonial.author}
                 </div>
-                <div className="text-sm text-[var(--color-text-muted)]">
+                <div className="text-sm text-text-muted">
                   {testimonial.title}, {testimonial.company}
                 </div>
               </div>
@@ -90,10 +90,10 @@ export default function TestimonialSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="relative"
           >
-            <div className="bg-[var(--color-primary)] rounded-2xl p-10 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-[var(--color-accent)]/20 -translate-y-1/3 translate-x-1/3" />
+            <div className="bg-primary rounded-2xl p-10 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-48 h-48 rounded-full bg-accent/20 -translate-y-1/3 translate-x-1/3" />
               <div className="relative z-10">
-                <p className="text-xs font-semibold uppercase tracking-widest text-[var(--color-accent-light)] mb-4">
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent-light mb-4">
                   Case Study Highlight
                 </p>
                 <div className="text-2xl font-bold text-white mb-2 leading-snug">
