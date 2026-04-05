@@ -40,7 +40,7 @@ export default function WhoWeAreSection() {
                             <p>
                                 Backed by over{" "}
                                 <strong className="text-primary">50 years of combined experience</strong> and{" "}
-                                <strong className="text-primary">ISO 9001:2015 certification</strong>, we bring
+                                ISO 9001:2015 certification, we bring
                                 niche expertise in Veeva Vault, CRM, OpenText Documentum, RPA, and AI-infused
                                 workflows to clients who cannot afford implementations that fall short in a
                                 regulated environment.
