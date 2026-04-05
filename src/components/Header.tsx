@@ -24,6 +24,8 @@ export default function Header() {
   // refs
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  const MotionNavLink = motion(NavLink);
+
   /**
    * listen to scroll events to toggle header background and shadow for better readability after scrolling down a bit
    */
@@ -122,13 +124,18 @@ export default function Header() {
               }
 
               return (
-                <NavLink
+                <MotionNavLink
                   key={item.label}
                   to={item.href}
-                  className="px-4 py-2 text-sm font-medium rounded-lg text-text hover:text-accent hover:bg-border-light transition-all duration-200"
+                  className={({ isActive }) =>
+                    `px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${isActive
+                      ? "text-accent bg-border-light font-semibold"
+                      : "text-text hover:text-accent hover:bg-border-light"
+                    }`
+                  }
                 >
                   {item.label}
-                </NavLink>
+                </MotionNavLink>
               );
             })}
           </nav>
@@ -229,7 +236,6 @@ export default function Header() {
                                   <a
                                     key={svc.label}
                                     href={svc.href}
-                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="group flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-border-light transition-colors"
                                   >
@@ -251,18 +257,22 @@ export default function Header() {
                 }
 
                 return (
-                  <motion.a
+                  <MotionNavLink
                     key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    to={item.href}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05 }}
-                    className="px-3 py-3 text-sm font-medium text-text hover:text-accent hover:bg-border-light rounded-xl transition-colors"
+                    onClick={() => setMobileOpen(false)}          // ← close menu on tap
+                    className={({ isActive }) =>
+                      `px-3 py-3 text-sm font-medium rounded-xl transition-colors ${isActive
+                        ? "text-accent bg-border-light font-semibold"
+                        : "text-text hover:text-accent hover:bg-border-light"
+                      }`
+                    }
                   >
                     {item.label}
-                  </motion.a>
+                  </MotionNavLink>
                 );
               })}
 
