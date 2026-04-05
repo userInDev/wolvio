@@ -5,7 +5,7 @@ export default function AboutHeroSection() {
   return (
     <section
       className="relative flex items-center justify-center overflow-hidden"
-      style={{ background: "var(--color-background)", minHeight: "70vh" }}
+      style={{ background: "var(--color-background)", minHeight: "65vh" }}
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none select-none">
@@ -69,20 +69,6 @@ export default function AboutHeroSection() {
             firm built exclusively for{" "}
             <span style={{ color: "var(--color-accent)" }}>life sciences</span>.
           </motion.h1>
-
-          <motion.p
-            variants={RISE}
-            className="leading-[1.7] mx-auto"
-            style={{
-              fontSize: "clamp(0.88rem, 0.95vw, 0.96rem)",
-              color: "var(--color-text-muted)",
-              maxWidth: 520,
-            }}
-          >
-            Backed by over 50 years of combined experience and ISO 9001:2015 certification,
-            we bring niche expertise in Veeva Vault, CRM, and AI-infused workflows to
-            clients who cannot afford implementations that fall short in a regulated environment.
-          </motion.p>
         </motion.div>
       </div>
     </section>

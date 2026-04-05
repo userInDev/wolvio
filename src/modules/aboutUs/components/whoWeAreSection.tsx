@@ -10,7 +10,7 @@ export default function WhoWeAreSection() {
     const { ref, isInView } = useScrollReveal(0.1);
 
     return (
-        <section className="py-20 lg:py-24 bg-background" ref={ref}>
+        <section className="py-20 lg:py-10 bg-background" ref={ref}>
             <div className="max-w-360 mx-auto px-6 lg:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                     <motion.div
