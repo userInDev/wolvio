@@ -5,7 +5,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 /**
  * Root application component
  */
+const HIDE_SITE = true;
 function App() {
+
+  if (HIDE_SITE) {
+    return <h1 style={{ textAlign: "center", marginTop: "20%" }}>
+      Site under maintenance
+    </h1>;
+  }
+
   return (
     <BrowserRouter>
       <Layout>
